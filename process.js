@@ -9,7 +9,7 @@ function kashida(text) {
   }
   return child_process.spawnSync(
     'kashida.exe',
-    ['C:\\Windows\\Fonts\\tahoma.ttf', '10000'].concat(text.split('').map(x => x.charCodeAt(0)))
+    ['C:\\Windows\\Fonts\\tahoma.ttf', '20000'].concat(text.split('').map(x => x.charCodeAt(0)))
   ).output.toString().replace(/,/g, '').trim().split('\n').map(x => x.split("'")[1]).join(',');
 }
 
