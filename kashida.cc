@@ -2,9 +2,8 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-#include <hb.h>
-//#include <hb-ot.h>
-#include <hb-directwrite.h>
+#include <harfbuzz/hb.h>
+#include <harfbuzz/hb-directwrite.h>
 
 int main(int argc, char **argv) {
   if (argc == 1) {
@@ -32,8 +31,6 @@ int main(int argc, char **argv) {
   hb_blob_t *hb_blob = hb_blob_create(font, font_file_size, HB_MEMORY_MODE_READONLY, nullptr, nullptr);
   hb_face_t *hb_face = hb_face_create(hb_blob, 0);
   hb_font_t *hb_font = hb_font_create(hb_face);
-
-  //hb_ot_font_set_funcs(hb_font);
 
   unsigned int upem = hb_face_get_upem(hb_face);
   hb_font_set_scale(hb_font, upem, upem);
