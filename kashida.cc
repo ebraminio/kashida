@@ -2,8 +2,8 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-#include <harfbuzz/hb.h>
-#include <harfbuzz/hb-directwrite.h>
+#include <hb.h>
+#include <hb-directwrite.h>
 
 int main(int argc, char **argv) {
   if (argc == 1) {
