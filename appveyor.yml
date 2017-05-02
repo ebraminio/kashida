@@ -1,0 +1,9 @@
+build_script:
+  - appveyor DownloadFile  https://github.com/behdad/harfbuzz/releases/download/1.4.6/harfbuzz-1.4.6.tar.bz2
+  - 7z x harfbuzz-1.4.6.tar.bz2
+  - 7z x harfbuzz-1.4.6.tar
+  - rename harfbuzz-1.4.6 harfbuzz
+  - mkdir build
+  - cd build
+  - cmake ..
+  - cmake --build .
